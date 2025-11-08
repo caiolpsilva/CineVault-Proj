@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>CineVault - Conheça a filmografia do Ator/Atriz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="secao-hero">
+    <div class="conteudo-hero">
+      <h1 class="titulo-hero">Descubra Atores</h1>
+      <p class="subtitulo-hero">
+        Explore a filmografia completa dos seus atores favoritos
+      </p>
+      <ion-button color="secondary" (click)="rolarParaBusca()">
+        Começar a Buscar
+      </ion-button>
+    </div>
+  </div>
+
+  <div class="container-busca">
+    <h2 class="titulo-secao">Buscar Atores</h2>
+
+    <div class="wrapper-busca">
+      <ion-searchbar
+        [(ngModel)]="nomeAtor"
+        (ionInput)="onSearchInput($event)"
+        placeholder="Digite o nome do ator/atriz..."
+        animated="true"
+        showClearButton="always"
+      >
+      </ion-searchbar>
+    </div>
+  </div>
+
+  <div class="container-sugestoes">
+    <div *ngIf="carregando" class="container-carregando">
+      <ion-spinner name="crescent"></ion-spinner>
+      <p class="texto-carregando">Buscando atores...</p>
+    </div>
+
+    <div *ngIf="atores.length > 0 && !carregando" class="lista-sugestoes">
+      <div
+        *ngFor="let ator of atores.slice(0, 5)"
+        class="item-sugestao"
+        (click)="selecionarAtor(ator)"
+      >
+        <ion-avatar slot="start">
+          <img
+            [src]="'https://image.tmdb.org/t/p/w185' + ator.profile_path"
+            alt="{{ ator.name }}"
+            class="avatar-ator"
+            loading="lazy"
+          />
+        </ion-avatar>
+
+        <div class="info-ator">
+          <span class="nome-ator">{{ ator.name | truncar:20 }}</span>
+        </div>
+
+        <ion-icon name="chevron-forward" slot="end" color="medium"></ion-icon>
+      </div>
+    </div>
+  </div>
+</ion-content>
