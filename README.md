@@ -59,7 +59,7 @@ src/app/
 1. **Clone e instale**:
    ```bash
    git clone <url-do-repositorio>
-   cd marlon-app
+   cd marlon-app-main
    npm install
    ```
 
@@ -87,5 +87,3 @@ src/app/
 
 
 ---
-
-**Desenvolvido com ❤️ usando Ionic + Angular**

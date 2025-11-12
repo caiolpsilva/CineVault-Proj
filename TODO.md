@@ -1,2 +1,0 @@
-- [x] Add ion-footer to home.page.html with app name and copyright
-- [x] Style the footer in home.page.scss
