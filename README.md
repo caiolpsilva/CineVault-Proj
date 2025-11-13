@@ -85,5 +85,9 @@ src/app/
 - `src/app/detalhes-ator/actor-details.page.ts` - Detalhes do ator
 - `src/environments/environment.ts` - Configuração da API
 
+## Grupo
+Beatriz Idolina Francisco Nascimento - 01708936
+Caio Lucas Pereira da Silva - 01680887
+Joyce Maria de Oliveira - 1719838
 
 ---
