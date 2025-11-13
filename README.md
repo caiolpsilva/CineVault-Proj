@@ -87,7 +87,9 @@ src/app/
 
 ## Grupo
 Beatriz Idolina Francisco Nascimento - 01708936
+
 Caio Lucas Pereira da Silva - 01680887
+
 Joyce Maria de Oliveira - 1719838
 
 ---
